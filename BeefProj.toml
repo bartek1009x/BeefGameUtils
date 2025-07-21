@@ -1,0 +1,6 @@
+FileVersion = 1
+
+[Project]
+Name = "GameUtils"
+TargetType = "BeefLib"
+StartupObject = "GameUtils.Program"

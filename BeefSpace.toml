@@ -1,0 +1,5 @@
+FileVersion = 1
+Projects = {GameUtils = {Path = "."}}
+
+[Workspace]
+StartupProject = "GameUtils"
