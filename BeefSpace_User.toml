@@ -1,10 +1,11 @@
 FileVersion = 1
 LastConfig = "Debug"
 LastPlatform = "Win64"
+RecentFilesList = ["c:\\Users\\bartl\\AppData\\Local\\BeefLang\\Projects\\Test\\src\\Program.bf", "c:\\Users\\bartl\\AppData\\Local\\BeefLang\\BeefLibs\\corlib\\src\\Diagnostics\\Debug.bf", "src\\Utils\\Timer.bf"]
 
 [MainWindow]
-X = 751
-Y = 62
+X = 331
+Y = 0
 Width = 1169
 Height = 877
 ShowKind = "ShowMaximized"
@@ -28,7 +29,7 @@ Type = "TabbedView"
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 Active = true
 TabLabel = "Workspace"
-TabWidth = 112.037
+TabWidth = 115.0
 TabIsPinned = false
 Type = "ProjectPanel"
 
@@ -41,9 +42,37 @@ SizePriority = 150.0
 DefaultDocumentsTabbedView = true
 Type = "TabbedView"
 
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+TabLabel = "Debug.bf"
+TabWidth = 94.0
+TabIsPinned = false
+Type = "SourceViewPanel"
+FilePath = "c:\\Users\\bartl\\AppData\\Local\\BeefLang\\BeefLibs\\corlib\\src\\Diagnostics\\Debug.bf"
+CursorPos = 609
+ProjectName = "corlib"
+
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+Active = true
+TabLabel = "Program.bf"
+TabWidth = 96.0
+TabIsPinned = false
+Type = "SourceViewPanel"
+FilePath = "c:\\Users\\bartl\\AppData\\Local\\BeefLang\\Projects\\Test\\src\\Program.bf"
+CursorPos = 253
+ProjectName = "Test"
+
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+TabLabel = "Timer.bf"
+TabWidth = 77.0
+TabIsPinned = false
+Type = "SourceViewPanel"
+FilePath = "src\\Utils\\Timer.bf"
+CursorPos = 204
+ProjectName = "GameUtils"
+
 [[MainDockingFrame.DockedWidgets]]
 RequestedWidth = 250.0
-RequestedHeight = 250.0
+RequestedHeight = 251.0
 Type = "DockingFrame"
 SplitType = 1
 
@@ -54,15 +83,15 @@ SizePriority = 1918.0
 Type = "TabbedView"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
-Active = true
 TabLabel = "Errors"
-TabWidth = 83.33333
+TabWidth = 86.0
 TabIsPinned = false
 Type = "ErrorsPanel"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+Active = true
 TabLabel = "Memory"
-TabWidth = 98.14815
+TabWidth = 99.0
 TabIsPinned = false
 Type = "MemoryPanel"
 AutoResize = "Auto_Mul8"
@@ -70,7 +99,7 @@ RequestedWidth = 300.0
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 TabLabel = "Watch"
-TabWidth = 86.11111
+TabWidth = 86.0
 TabIsPinned = false
 Type = "WatchPanel"
 Columns = [{Width = 216.0}, {Width = 216.0}, {Width = 216.0}]
@@ -80,7 +109,7 @@ EvalStr = ""
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 TabLabel = "Auto"
-TabWidth = 77.77777
+TabWidth = 77.0
 TabIsPinned = false
 Type = "AutoWatchPanel"
 Columns = [{Width = 216.0}, {Width = 216.0}, {Width = 216.0}]
@@ -93,26 +122,26 @@ Type = "TabbedView"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 TabLabel = "Threads"
-TabWidth = 94.44444
+TabWidth = 97.0
 TabIsPinned = false
 Type = "ThreadPanel"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+Active = true
 TabLabel = "Call Stack"
-TabWidth = 103.7037
+TabWidth = 105.0
 TabIsPinned = false
 Type = "CallStackPanel"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 TabLabel = "Immediate"
-TabWidth = 110.1852
+TabWidth = 111.0
 TabIsPinned = false
 Type = "ImmediatePanel"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
-Active = true
 TabLabel = "Output"
-TabWidth = 91.66666
+TabWidth = 90.0
 TabIsPinned = false
 Type = "OutputPanel"
 
