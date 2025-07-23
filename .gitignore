@@ -1,4 +1,5 @@
 recovery/
+build/
 BeefProj.toml
 BeefSpace.toml
 BeefSpace_User.toml
