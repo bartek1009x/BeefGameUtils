@@ -270,9 +270,9 @@ public class Matrix3 {
 		return this;
 	}
 
-	public String toString () {
+	public override void ToString(String strBuffer) {
 		float[] val = this.val;
-		return scope $"[{val[M00]}|{val[M01]}|{val[M02]}]\n[{val[M10]}|{val[M11]}|{val[M12]}]\n[{val[M20]}|{val[M21]}|{val[M22]}]";
+		strBuffer.Append(scope $"[{val[M00]}|{val[M01]}|{val[M02]}]\n[{val[M10]}|{val[M11]}|{val[M12]}]\n[{val[M20]}|{val[M21]}|{val[M22]}]");
 	}
 
 	/** @return The determinant of this matrix */

@@ -4,7 +4,6 @@ namespace GameUtils.Utils;
 
 using System;
 using System.Collections;
-using System.Diagnostics;
 using System.Threading;
 
 class Scheduler {
@@ -54,8 +53,6 @@ class Scheduler {
 					}
 
 				}
-
-				Debug.WriteLine($"Count {scheduledFunctions.Count}");
 
 				timerThread = null;
 

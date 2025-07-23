@@ -273,8 +273,8 @@ public class Vector2 : Vector<Vector2> {
 	/** Converts this {@code Vector2} to a string in the format {@code (x,y)}.
 	 * @return a string representation of this object. */
 	
-	public String toString () {
-		return scope $"({x},{y})";
+	public override void ToString(String strBuffer) {
+		strBuffer.Append(scope $"({x},{y})");
 	}
 
 	/** Sets this {@code Vector2} to the value represented by the specified string according to the format of toString().

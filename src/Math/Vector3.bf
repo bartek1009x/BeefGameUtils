@@ -590,8 +590,8 @@ public class Vector3 : Vector<Vector3> {
 	/** Converts this {@code Vector3} to a string in the format {@code (x,y,z)}.
 	 * @return a string representation of this object. */
 	
-	public String toString () {
-		return scope $"({x}, {y}, {z})";
+	public override void ToString(String strBuffer) {
+		strBuffer.Append(scope $"({x}, {y}, {z})");
 	}
 
 	/** Sets this {@code Vector3} to the value represented by the specified string according to the format of toString().

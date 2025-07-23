@@ -658,7 +658,7 @@ public class Affine2 {
 		point.y = m10 * x + m11 * y + m12;
 	}
 
-	public String toString () {
-		return scope $"[{m00}|{m01}|{m02}]\n{m10}|{m11}|{m12}]\n[0.0|0.0|0.1]";
+	public override void ToString(String strBuffer) {
+		strBuffer.Append(scope $"[{m00}|{m01}|{m02}]\n{m10}|{m11}|{m12}]\n[0.0|0.0|0.1]");
 	}
 }

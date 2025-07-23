@@ -172,7 +172,7 @@ public class Plane {
 		this.d = plane.d;
 	}
 
-	public String toString () {
-		return scope $"{normal.toString()}, {d}";
+	public override void ToString(String strBuffer) {
+		strBuffer.Append(scope $"{normal.ToString(..scope String())}, {d}");
 	}
 }

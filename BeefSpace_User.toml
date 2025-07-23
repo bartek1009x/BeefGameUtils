@@ -1,7 +1,7 @@
 FileVersion = 1
 LastConfig = "Debug"
 LastPlatform = "Win64"
-RecentFilesList = ["src\\Math\\Intersector.bf"]
+RecentFilesList = ["src\\Math\\Matrix4.bf", "c:\\Users\\bartl\\AppData\\Local\\BeefLang\\Projects\\Test\\src\\Program.bf", "Disassembly"]
 
 [MainWindow]
 X = 331
@@ -43,15 +43,30 @@ DefaultDocumentsTabbedView = true
 Type = "TabbedView"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+TabLabel = "Disassembly"
+TabWidth = 112.0
+TabIsPinned = false
+Type = "DisassemblyPanel"
+
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 Active = true
-TabLabel = "Intersector.bf"
-TabWidth = 116.0
+TabLabel = "Matrix4.bf"
+TabWidth = 99.0
 TabIsPinned = false
 Type = "SourceViewPanel"
-FilePath = "src\\Math\\Intersector.bf"
-CursorPos = 966
-VertPos = 225.0
+FilePath = "src\\Math\\Matrix4.bf"
+CursorPos = 4469
+VertPos = 810.0
 ProjectName = "GameUtils"
+
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+TabLabel = "Program.bf"
+TabWidth = 106.0
+TabIsPinned = false
+Type = "SourceViewPanel"
+FilePath = "c:\\Users\\bartl\\AppData\\Local\\BeefLang\\Projects\\Test\\src\\Program.bf"
+CursorPos = 405
+ProjectName = "Test"
 
 [[MainDockingFrame.DockedWidgets]]
 RequestedWidth = 250.0

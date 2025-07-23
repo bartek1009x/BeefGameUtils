@@ -317,8 +317,8 @@ public class BoundingBox {
 		return min.x <= v.x && max.x >= v.x && min.y <= v.y && max.y >= v.y && min.z <= v.z && max.z >= v.z;
 	}
 
-	public String toString () {
-		return scope $"[{min}|{max}]";
+	public override void ToString(String strBuffer) {
+		strBuffer.Append(scope $"[{min}|{max}]");
 	}
 
 	/** Extends the bounding box by the given vector.

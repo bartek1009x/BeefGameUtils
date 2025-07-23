@@ -106,8 +106,8 @@ public class Quaternion {
 	}
 
 	
-	public String toString () {
-		return scope $"[{x}|{y}|{z}|{w}]";
+	public override void ToString(String strBuffer) {
+		strBuffer.Append(scope $"[{x}|{y}|{z}|{w}]");
 	}
 
 	/** Sets the quaternion to the given euler angles in degrees.

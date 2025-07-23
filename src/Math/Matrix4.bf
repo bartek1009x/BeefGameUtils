@@ -17,6 +17,7 @@
 namespace GameUtils;
 
 using System;
+using System.Diagnostics;
 
 /**
  * Encapsulates a column major 4 by 4 matrix.
@@ -24,7 +25,6 @@ using System;
  * @author badlogicgames@gmail.com
 */
 public class Matrix4 {
-	private const int64 serialVersionUID = -2717655254359579617L;
 	/** XX: Typically the unrotated X component for scaling, also the cosine of the angle when rotated on the Y and/or Z axis. On
 	 * Vector3 multiplication this value is multiplied with the source X component and added to the target X component. */
 	public const int M00 = 0;
@@ -70,18 +70,18 @@ public class Matrix4 {
 	/** WW: Typically the value one. On Vector3 multiplication this value is ignored. */
 	public const int M33 = 15;
 
-	readonly Quaternion quat = new Quaternion();
-	readonly Quaternion quat2 = new Quaternion();
-	readonly Vector3 l_vez = new Vector3();
-	readonly Vector3 l_vex = new Vector3();
-	readonly Vector3 l_vey = new Vector3();
-	readonly Vector3 tmpVec = new Vector3();
-	readonly Matrix4 tmpMat = new Matrix4();
-	readonly Vector3 right = new Vector3();
-	readonly Vector3 tmpForward = new Vector3();
-	readonly Vector3 tmpUp = new Vector3();
+	static readonly Quaternion quat = new Quaternion();
+	static readonly Quaternion quat2 = new Quaternion();
+	static readonly Vector3 l_vez = new Vector3();
+	static readonly Vector3 l_vex = new Vector3();
+	static readonly Vector3 l_vey = new Vector3();
+	static readonly Vector3 tmpVec = new Vector3();
+	static readonly Matrix4 tmpMat = new Matrix4();
+	static readonly Vector3 right = new Vector3();
+	static readonly Vector3 tmpForward = new Vector3();
+	static readonly Vector3 tmpUp = new Vector3();
 
-	public readonly float[] val = new float[16];
+	public float[] val = new float[16];
 
 	/** Constructs an identity matrix */
 	public this() {
@@ -1116,8 +1116,8 @@ public class Matrix4 {
 		return null;
 	}
 
-	public String toString () {
-		return scope $"[{val[M00]}|{val[M01]}|{val[M02]}|{val[M03]}]\n[{val[M10]}|{val[M11]}|{val[M12]}|{val[M13]}]\n[{val[M20]}|{val[M21]}|{val[M22]}|{val[M23]}]\n[{val[M30]}|{val[M31]}|{val[M32]}|{val[M33]}]";
+	public override void ToString(String strBuffer) {
+		strBuffer.Append(scope $"[{val[M00]}|{val[M01]}|{val[M02]}|{val[M03]}]\n[{val[M10]}|{val[M11]}|{val[M12]}|{val[M13]}]\n[{val[M20]}|{val[M21]}|{val[M22]}|{val[M23]}]\n[{val[M30]}|{val[M31]}|{val[M32]}|{val[M33]}]");
 	}
 
 	// @off
