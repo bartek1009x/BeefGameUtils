@@ -1,5 +1,0 @@
-FileVersion = 1
-Projects = {GameUtils = {Path = "."}, Test = {Path = "../Test"}}
-
-[Workspace]
-StartupProject = "Test"
