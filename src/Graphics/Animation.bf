@@ -23,7 +23,7 @@ using System.Collections;
  * An Animation stores a list of objects representing an animated sequence, e.g. for running or jumping. Each object in the
  * Animation is called a key frame, and multiple key frames make up the animation.
 
- * Original author: mzechner
+ * @author mzechner
 */
 
 public class Animation<T> {

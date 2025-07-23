@@ -18,6 +18,10 @@ namespace GameUtils;
 
 using System;
 
+/** Utility and fast math functions.
+* <p>
+* Thanks to Riven on JavaGaming.org for the basis of sin/cos/floor/ceil.
+* @author Nathan Sweet */
 public static struct MathUtils
 {
 

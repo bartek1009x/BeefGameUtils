@@ -559,7 +559,7 @@ public class Matrix3 {
 	}
 
 	/** Scale this matrix using the x and y components of the vector but leave the rest of the matrix alone.
-	 * @param scale The {@link Vector3} to use to scale this matrix.
+	 * @param scale The Vector3 to use to scale this matrix.
 	 * @return This matrix for the purpose of chaining methods together. */
 	public Matrix3 scl (Vector2 scale) {
 		val[M00] *= scale.x;
@@ -568,7 +568,7 @@ public class Matrix3 {
 	}
 
 	/** Scale this matrix using the x and y components of the vector but leave the rest of the matrix alone.
-	 * @param scale The {@link Vector3} to use to scale this matrix. The z component will be ignored.
+	 * @param scale The Vector3 to use to scale this matrix. The z component will be ignored.
 	 * @return This matrix for the purpose of chaining methods together. */
 	public Matrix3 scl (Vector3 scale) {
 		val[M00] *= scale.x;

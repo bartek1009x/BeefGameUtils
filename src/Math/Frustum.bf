@@ -49,7 +49,7 @@ public class Frustum {
 	}
 
 	/** Updates the clipping plane's based on the given inverse combined projection and view matrix, e.g. from an
-	 * {@link OrthographicCamera} or {@link PerspectiveCamera}.
+	 * OrthographicCamera or PerspectiveCamera.
 	 * @param inverseProjectionView the combined projection and view matrices. */
 	public void update (Matrix4 inverseProjectionView) {
 		clipSpacePlanePointsArray.CopyTo(planePointsArray);
@@ -145,7 +145,7 @@ public class Frustum {
 		return true;
 	}
 
-	/** Returns whether the given {@link BoundingBox} is in the frustum.
+	/** Returns whether the given BoundingBox is in the frustum.
 	 * 
 	 * @param bounds The bounding box
 	 * @return Whether the bounding box is in the frustum */
@@ -189,7 +189,7 @@ public class Frustum {
 		return true;
 	}
 
-	/** Returns whether the given {@link OrientedBoundingBox} is in the frustum.
+	/** Returns whether the given OrientedBoundingBox is in the frustum.
 	 *
 	 * @param obb The oriented bounding box
 	 * @return Whether the oriented bounding box is in the frustum */

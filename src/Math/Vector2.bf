@@ -277,7 +277,7 @@ public class Vector2 : Vector<Vector2> {
 		return scope $"({x},{y})";
 	}
 
-	/** Sets this {@code Vector2} to the value represented by the specified string according to the format of {@link #toString()}.
+	/** Sets this {@code Vector2} to the value represented by the specified string according to the format of toString().
 	 * @param v the string.
 	 * @return this vector for chaining */
 	public Vector2 fromString (String v) {
@@ -322,7 +322,7 @@ public class Vector2 : Vector<Vector2> {
 
 	/** @return the angle in degrees of this vector (point) relative to the x-axis. Angles are towards the positive y-axis
 	 *         (typically counter-clockwise) and between 0 and 360.
-	 * // Deprecated use {@link #angleDeg()} instead. */
+	 * // Deprecated use angleDeg() instead. */
 	// Deprecated
 	public float angle () {
 		float angle = (float)Math.Atan2(y, x) * MathUtils.radiansToDegrees;
@@ -332,7 +332,7 @@ public class Vector2 : Vector<Vector2> {
 
 	/** @return the angle in degrees of this vector (point) relative to the given vector. Angles are towards the negative y-axis
 	 *         (typically clockwise) between -180 and +180
-	 * // Deprecated use {@link #angleDeg(Vector2)} instead. Beware of the changes in returned angle to counter-clockwise and the
+	 * // Deprecated use angleDeg(Vector2) instead. Beware of the changes in returned angle to counter-clockwise and the
 	 *             range. */
 	// Deprecated
 	public float angle (Vector2 reference) {
@@ -383,7 +383,7 @@ public class Vector2 : Vector<Vector2> {
 
 	/** Sets the angle of the vector in degrees relative to the x-axis, towards the positive y-axis (typically counter-clockwise).
 	 * @param degrees The angle in degrees to set.
-	 * // Deprecated use {@link #setAngleDeg(float)} instead. */
+	 * // Deprecated use setAngleDeg(float) instead. */
 	// Deprecated
 	public Vector2 setAngle (float degrees) {
 		return setAngleRad(degrees * MathUtils.degreesToRadians);
@@ -406,7 +406,7 @@ public class Vector2 : Vector<Vector2> {
 
 	/** Rotates the Vector2 by the given angle, counter-clockwise assuming the y-axis points up.
 	 * @param degrees the angle in degrees
-	 * // Deprecated use {@link #rotateDeg(float)} instead. */
+	 * // Deprecated use rotateDeg(float) instead. */
 	// Deprecated
 	public Vector2 rotate (float degrees) {
 		return rotateRad(degrees * MathUtils.degreesToRadians);
@@ -415,7 +415,7 @@ public class Vector2 : Vector<Vector2> {
 	/** Rotates the Vector2 by the given angle around reference vector, counter-clockwise assuming the y-axis points up.
 	 * @param degrees the angle in degrees
 	 * @param reference center Vector2
-	 * @deprecated use {@link #rotateAroundDeg(Vector2, float)} instead. */
+	 * @deprecated use rotateAroundDeg(Vector2, float) instead. */
 	// Deprecated
 	public Vector2 rotateAround (Vector2 reference, float degrees) {
 		return this.sub(reference).rotateDeg(degrees).add(reference);

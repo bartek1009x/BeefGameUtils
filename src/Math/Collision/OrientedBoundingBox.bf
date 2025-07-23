@@ -75,7 +75,7 @@ public class OrientedBoundingBox {
 		return vertices;
 	}
 
-	/** Get the current bounds. Call {@link #update()} if you manually change this bounding box. */
+	/** Get the current bounds. Call update() if you manually change this bounding box. */
 	public BoundingBox getBounds () {
 		return bounds;
 	}
@@ -95,7 +95,7 @@ public class OrientedBoundingBox {
 		bounds.getCorner111(vertices[0b111]).mul(transform);
 	}
 
-	/** Get the current transformation matrix. Call {@link #update()} if you manually change this matrix. */
+	/** Get the current transformation matrix. Call update() if you manually change this matrix. */
 	public Matrix4 getTransform () {
 		return transform;
 	}

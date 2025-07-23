@@ -384,7 +384,7 @@ public class Vector3 : Vector<Vector3> {
 			x * l_mat[Matrix3.M02] + y * l_mat[Matrix3.M12] + z * l_mat[Matrix3.M22]);
 	}
 
-	/** Multiplies the vector by the given {@link Quaternion}.
+	/** Multiplies the vector by the given Quaternion.
 	 * @return This vector for chaining */
 	public Vector3 mul (Quaternion quat) {
 		return quat.transform(this);
@@ -415,7 +415,7 @@ public class Vector3 : Vector<Vector3> {
 	}
 
 	/** Multiplies this vector by the transpose of the first three columns of the matrix. Note: only works for translation and
-	 * rotation, does not work for scaling. For those, use {@link #rot(Matrix4)} with {@link Matrix4#inv()}.
+	 * rotation, does not work for scaling. For those, use Matrix4.rot() with Matrix4.inv().
 	 * @param matrix The transformation matrix
 	 * @return The vector for chaining */
 	public Vector3 unrotate (Matrix4 matrix) {
@@ -427,7 +427,7 @@ public class Vector3 : Vector<Vector3> {
 
 	/** Translates this vector in the direction opposite to the translation of the matrix and the multiplies this vector by the
 	 * transpose of the first three columns of the matrix. Note: only works for translation and rotation, does not work for
-	 * scaling. For those, use {@link #mul(Matrix4)} with {@link Matrix4#inv()}.
+	 * scaling. For those, use Matrix4.mul() with Matrix4.inv().
 	 * @param matrix The transformation matrix
 	 * @return The vector for chaining */
 	public Vector3 untransform (Matrix4 matrix) {
@@ -594,7 +594,7 @@ public class Vector3 : Vector<Vector3> {
 		return scope $"({x}, {y}, {z})";
 	}
 
-	/** Sets this {@code Vector3} to the value represented by the specified string according to the format of {@link #toString()}.
+	/** Sets this {@code Vector3} to the value represented by the specified string according to the format of toString().
 	 * @param v the string.
 	 * @return this vector for chaining */
 	public Vector3 fromString (String v) {

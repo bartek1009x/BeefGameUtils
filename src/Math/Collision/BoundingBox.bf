@@ -26,17 +26,17 @@ using System.Collections;
 public class BoundingBox {
 	private static Vector3 tmpVector = new Vector3();
 
-	/** Minimum vector. All XYZ components should be inferior to corresponding {@link #max} components. Call {@link #update()} if
+	/** Minimum vector. All XYZ components should be inferior to corresponding max components. Call update() if
 	 * you manually change this vector. */
 	public Vector3 min = new Vector3();
-	/** Maximum vector. All XYZ components should be superior to corresponding {@link #min} components. Call {@link #update()} if
+	/** Maximum vector. All XYZ components should be superior to corresponding min components. Call update() if
 	 * you manually change this vector. */
 	public Vector3 max = new Vector3();
 
 	private Vector3 cnt = new Vector3();
 	private Vector3 dim = new Vector3();
 
-	/** @param out The {@link Vector3} to receive the center of the bounding box.
+	/** @param out The Vector3 to receive the center of the bounding box.
 	 * @return The vector specified with the out argument. */
 	public Vector3 getCenter (Vector3 outV) {
 		return outV.set(cnt);
@@ -86,7 +86,7 @@ public class BoundingBox {
 		return outV.set(max.x, max.y, max.z);
 	}
 
-	/** @param out The {@link Vector3} to receive the dimensions of this bounding box on all three axis.
+	/** @param out The Vector3 to receive the dimensions of this bounding box on all three axis.
 	 * @return The vector specified with the out argument */
 	public Vector3 getDimensions (Vector3 outV) {
 		return outV.set(dim);
@@ -104,13 +104,13 @@ public class BoundingBox {
 		return dim.z;
 	}
 
-	/** @param out The {@link Vector3} to receive the minimum values.
+	/** @param out The Vector3 to receive the minimum values.
 	 * @return The vector specified with the out argument */
 	public Vector3 getMin (Vector3 outV) {
 		return outV.set(min);
 	}
 
-	/** @param out The {@link Vector3} to receive the maximum values.
+	/** @param out The Vector3 to receive the maximum values.
 	 * @return The vector specified with the out argument */
 	public Vector3 getMax (Vector3 outV) {
 		return outV.set(max);
@@ -158,7 +158,7 @@ public class BoundingBox {
 		return this;
 	}
 
-	/** Should be called if you modify {@link #min} and/or {@link #max} vectors manually. */
+	/** Should be called if you modify min and/or max vectors manually. */
 	public void update () {
 		cnt.set(min).add(max).scl(0.5f);
 		dim.set(max).sub(min);
@@ -197,7 +197,7 @@ public class BoundingBox {
 		return this;
 	}
 
-	/** Extends the bounding box to incorporate the given {@link Vector3}.
+	/** Extends the bounding box to incorporate the given Vector3.
 	 * @param point The vector
 	 * @return This bounding box for chaining. */
 	public BoundingBox ext (Vector3 point) {
@@ -211,7 +211,7 @@ public class BoundingBox {
 		return this.set(min.set(0, 0, 0), max.set(0, 0, 0));
 	}
 
-	/** Returns whether this bounding box is valid. This means that {@link #max} is greater than or equal to {@link #min}.
+	/** Returns whether this bounding box is valid. This means that max is greater than or equal to min.
 	 * @return True in case the bounding box is valid, false otherwise */
 	public bool isValid () {
 		return min.x <= max.x && min.y <= max.y && min.z <= max.z;

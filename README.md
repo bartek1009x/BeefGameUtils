@@ -6,3 +6,5 @@ Because [LibGDX](https://github.com/libgdx/libgdx/) is under the Apache 2.0 lice
 The changes from the original LibGDX code include the removal of some functions that I personally don't use and obviously changes in syntax and used std functions to adapt it to Beef.
 
 The Scheduler is not ported from LibGDX, therefore I have put it under MIT.
+
+The in-code documentation of LibGDX is almost the same as the original, except I have changed the @Link segments as Beef's documentation doesn't use @Link, and some other small tweaks. The documentation was not adapted to this library, so some things might mention stuff that's only possible in the actual LibGDX, but I decided to keep the documentation as most info applies to this library too.

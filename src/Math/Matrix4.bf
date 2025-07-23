@@ -21,7 +21,7 @@ using System;
 /**
  * Encapsulates a column major 4 by 4 matrix.
 
- * Original author: badlogicgames@gmail.com
+ * @author badlogicgames@gmail.com
 */
 public class Matrix4 {
 	private const int64 serialVersionUID = -2717655254359579617L;
@@ -105,7 +105,7 @@ public class Matrix4 {
 		set(values);
 	}
 
-	/** Constructs a rotation matrix from the given {@link Quaternion}.
+	/** Constructs a rotation matrix from the given Quaternion.
 	 * @param quaternion The quaternion to be copied. (The quaternion is not modified) */
 	public this(Quaternion quaternion) {
 		set(quaternion);
@@ -1052,16 +1052,16 @@ public class Matrix4 {
 	}
 
 	/** Gets the rotation of this matrix.
-	 * @param rotation The {@link Quaternion} to receive the rotation
+	 * @param rotation The Quaternion to receive the rotation
 	 * @param normalizeAxes True to normalize the axes, necessary when the matrix might also include scaling.
-	 * @return The provided {@link Quaternion} for chaining. */
+	 * @return The provided Quaternion for chaining. */
 	public Quaternion getRotation(Quaternion rotation, bool normalizeAxes) {
 		return rotation.setFromMatrix(normalizeAxes, this);
 	}
 
 	/** Gets the rotation of this matrix.
-	 * @param rotation The {@link Quaternion} to receive the rotation
-	 * @return The provided {@link Quaternion} for chaining. */
+	 * @param rotation The Quaternion to receive the rotation
+	 * @return The provided Quaternion for chaining. */
 	public Quaternion getRotation(Quaternion rotation) {
 		return rotation.setFromMatrix(this);
 	}
@@ -1198,10 +1198,10 @@ public class Matrix4 {
 	}
 
 	/** Multiplies the vectors with the given matrix. The matrix array is assumed to hold a 4x4 column major matrix as you can get
-	 * from {@link Matrix4#val}. The vectors array is assumed to hold 3-component vectors. Offset specifies the offset into the
+	 * from Matrix4.val. The vectors array is assumed to hold 3-component vectors. Offset specifies the offset into the
 	 * array where the x-component of the first vector is located. The numVecs parameter specifies the number of vectors stored in
 	 * the vectors array. The stride parameter specifies the number of floats between subsequent vectors and must be >= 3. This is
-	 * the same as {@link Vector3#mul(Matrix4)} applied to multiple vectors.
+	 * the same as Vector3.mul(Matrix4) applied to multiple vectors.
 	 * @param mat the matrix
 	 * @param vecs the vectors
 	 * @param offset the offset into the vectors array
@@ -1216,10 +1216,10 @@ public class Matrix4 {
 	}
 
 	/** Multiplies the vectors with the given matrix, , performing a division by w. The matrix array is assumed to hold a 4x4 column
-	 * major matrix as you can get from {@link Matrix4#val}. The vectors array is assumed to hold 3-component vectors. Offset
+	 * major matrix as you can get from Matrix4.val. The vectors array is assumed to hold 3-component vectors. Offset
 	 * specifies the offset into the array where the x-component of the first vector is located. The numVecs parameter specifies
 	 * the number of vectors stored in the vectors array. The stride parameter specifies the number of floats between subsequent
-	 * vectors and must be >= 3. This is the same as {@link Vector3#prj(Matrix4)} applied to multiple vectors.
+	 * vectors and must be >= 3. This is the same as Vector3.prj(Matrix4) applied to multiple vectors.
 	 * @param mat the matrix
 	 * @param vecs the vectors
 	 * @param offset the offset into the vectors array
@@ -1234,10 +1234,10 @@ public class Matrix4 {
 	}
 
 	/** Multiplies the vectors with the top most 3x3 sub-matrix of the given matrix. The matrix array is assumed to hold a 4x4
-	 * column major matrix as you can get from {@link Matrix4#val}. The vectors array is assumed to hold 3-component vectors.
+	 * column major matrix as you can get from Matrix4.val. The vectors array is assumed to hold 3-component vectors.
 	 * Offset specifies the offset into the array where the x-component of the first vector is located. The numVecs parameter
 	 * specifies the number of vectors stored in the vectors array. The stride parameter specifies the number of floats between
-	 * subsequent vectors and must be >= 3. This is the same as {@link Vector3#rot(Matrix4)} applied to multiple vectors.
+	 * subsequent vectors and must be >= 3. This is the same as Vector3#rot(Matrix4) applied to multiple vectors.
 	 * @param mat the matrix
 	 * @param vecs the vectors
 	 * @param offset the offset into the vectors array
@@ -1253,7 +1253,7 @@ public class Matrix4 {
 	// @on
 
 	/** Multiplies the matrix mata with matrix matb, storing the result in mata. The arrays are assumed to hold 4x4 column major
-	 * matrices as you can get from {@link Matrix4#val}. This is the same as {@link Matrix4#mul(Matrix4)}.
+	 * matrices as you can get from Matrix4.val. This is the same as Matrix4.mul(Matrix4).
 	 *
 	 * @param mata the first matrix.
 	 * @param matb the second matrix. */
@@ -1293,9 +1293,9 @@ public class Matrix4 {
 	}
 
 	/** Multiplies the vector with the given matrix. The matrix array is assumed to hold a 4x4 column major matrix as you can get
-	 * from {@link Matrix4#val}. The vector array is assumed to hold a 3-component vector, with x being the first element, y being
+	 * from Matrix4.val. The vector array is assumed to hold a 3-component vector, with x being the first element, y being
 	 * the second and z being the last component. The result is stored in the vector array. This is the same as
-	 * {@link Vector3#mul(Matrix4)}.
+	 * Vector3.mul(Matrix4).
 	 * @param mat the matrix
 	 * @param vec the vector. */
 	public static void mulVec(float[] mat, float[] vec) {
@@ -1308,9 +1308,9 @@ public class Matrix4 {
 	}
 
 	/** Multiplies the vector with the given matrix, performing a division by w. The matrix array is assumed to hold a 4x4 column
-	 * major matrix as you can get from {@link Matrix4#val}. The vector array is assumed to hold a 3-component vector, with x being
+	 * major matrix as you can get from Matrix4.val. The vector array is assumed to hold a 3-component vector, with x being
 	 * the first element, y being the second and z being the last component. The result is stored in the vector array. This is the
-	 * same as {@link Vector3#prj(Matrix4)}.
+	 * same as Vector3.prj(Matrix4).
 	 * @param mat the matrix
 	 * @param vec the vector. */
 	public static void prj(float[] mat, float[] vec) {
@@ -1324,9 +1324,9 @@ public class Matrix4 {
 	}
 
 	/** Multiplies the vector with the top most 3x3 sub-matrix of the given matrix. The matrix array is assumed to hold a 4x4
-	 * column major matrix as you can get from {@link Matrix4#val}. The vector array is assumed to hold a 3-component vector, with
+	 * column major matrix as you can get from Matrix4.val. The vector array is assumed to hold a 3-component vector, with
 	 * x being the first element, y being the second and z being the last component. The result is stored in the vector array. This
-	 * is the same as {@link Vector3#rot(Matrix4)}.
+	 * is the same as Vector3.rot(Matrix4).
 	 * @param mat the matrix
 	 * @param vec the vector. */
 	public static void rot(float[] mat, float[] vec) {
@@ -1339,7 +1339,7 @@ public class Matrix4 {
 	}
 
 	/** Computes the inverse of the given matrix. The matrix array is assumed to hold a 4x4 column major matrix as you can get from
-	 * {@link Matrix4#val}.
+	 * Matrix4.val.
 	 * @param values the matrix values.
 	 * @return false in case the inverse could not be calculated, true otherwise. */
 	public static bool inv(float[] values) {
@@ -1414,7 +1414,7 @@ public class Matrix4 {
 	}
 
 	/** Computes the determinante of the given matrix. The matrix array is assumed to hold a 4x4 column major matrix as you can get
-	 * from {@link Matrix4#val}.
+	 * from Matrix4.val.
 	 * @param values the matrix values.
 	 * @return the determinante. */
 	public static float det(float[] values) {

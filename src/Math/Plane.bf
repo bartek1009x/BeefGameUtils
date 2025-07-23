@@ -22,7 +22,7 @@ using System;
  * 
  * @author badlogicgames@gmail.com */
 public class Plane {
-	/** Enum specifying on which side a point lies respective to the plane and it's normal. {@link PlaneSide#Front} is the side to
+	/** Enum specifying on which side a point lies respective to the plane and it's normal. PlaneSide#Front is the side to
 	 * which the normal points.
 	 * 
 	 * @author mzechner */

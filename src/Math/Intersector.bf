@@ -18,6 +18,10 @@ namespace GameUtils.Math;
 
 using System;
 
+/** Class offering various static methods for intersection testing between different geometric objects.
+* @author badlogicgames@gmail.com
+* @author jan.stria
+* @author Nathan Sweet */
 public static class Intersector {
 
 	public static bool hasOverlap (Vector3[] axes, Vector3[] aVertices, Vector3[] bVertices) {

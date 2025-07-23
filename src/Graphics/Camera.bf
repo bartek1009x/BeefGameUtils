@@ -19,7 +19,7 @@ namespace GameUtils;
 using System;
 using GameUtils.Math;
 
-/** Base class for {@link OrthographicCamera} and {@link PerspectiveCamera}.
+/** Base class for OrthographicCamera and PerspectiveCamera.
  * @author mzechner */
 public abstract class Camera {
 	/** the position of the camera **/
@@ -53,11 +53,11 @@ public abstract class Camera {
 
 	private Vector3 tmpVec = new Vector3();
 
-	/** Recalculates the projection and view matrix of this camera and the {@link Frustum} planes. Use this after you've
+	/** Recalculates the projection and view matrix of this camera and the Frustum planes. Use this after you've
 	 * manipulated any of the attributes of the camera. */
 	public void update() {};
 
-	/** Recalculates the projection and view matrix of this camera and the {@link Frustum} planes if <code>updateFrustum</code> is
+	/** Recalculates the projection and view matrix of this camera and the Frustum planes if <code>updateFrustum</code> is
 	 * true. Use this after you've manipulated any of the attributes of the camera. */
 	public void update(bool updateFrustum) {};
 
@@ -125,7 +125,7 @@ public abstract class Camera {
 		up.rot(transform);
 	}
 
-	/** Rotates the direction and up vector of this camera by the given {@link Quaternion}. The direction and up vector will not be
+	/** Rotates the direction and up vector of this camera by the given Quaternion. The direction and up vector will not be
 	 * orthogonalized.
 	 * 
 	 * @param quat The quaternion */
@@ -173,16 +173,16 @@ public abstract class Camera {
 
 	/** Function to translate a point given in touch coordinates to world space. It's the same as GLU gluUnProject, but does not
 	 * rely on OpenGL. The x- and y-coordinate of vec are assumed to be in touch coordinates (origin is the top left corner, y
-	 * pointing down, x pointing to the right) as reported by the touch methods in {@link Input}. A z-coordinate of 0 will return a
+	 * pointing down, x pointing to the right) as reported by the touch methods in Input. A z-coordinate of 0 will return a
 	 * point on the near plane, a z-coordinate of 1 will return a point on the far plane. This method allows you to specify the
-	 * viewport position and dimensions in the coordinate system expected by {@link GL20#glViewport(int, int, int, int)}, with the
+	 * viewport position and dimensions in the coordinate system expected by GL20#glViewport(int, int, int, int), with the
 	 * origin in the bottom left corner of the screen.
 	 * @param touchCoords the point in touch coordinates (origin top left)
 	 * @param viewportX the coordinate of the bottom left corner of the viewport in glViewport coordinates.
 	 * @param viewportY the coordinate of the bottom left corner of the viewport in glViewport coordinates.
 	 * @param viewportWidth the width of the viewport in pixels
 	 * @param viewportHeight the height of the viewport in pixels
-	 * @return the mutated and unprojected touchCoords {@link Vector3} */
+	 * @return the mutated and unprojected touchCoords Vector3 */
 	public Vector3 unproject (Vector3 touchCoords, float viewportX, float viewportY, float viewportWidth, float viewportHeight) {
 		float x = touchCoords.x - viewportX, y = viewportHeight - touchCoords.y - viewportY;
 		touchCoords.x = (2 * x) / viewportWidth - 1;
@@ -193,38 +193,38 @@ public abstract class Camera {
 	}
 
 	/** Function to translate a point given in touch coordinates to world space. It's the same as GLU gluUnProject but does not
-	 * rely on OpenGL. The viewport is assumed to span the whole screen and is fetched from {@link Graphics#getWidth()} and
-	 * {@link Graphics#getHeight()}. The x- and y-coordinate of vec are assumed to be in touch coordinates (origin is the top left
-	 * corner, y pointing down, x pointing to the right) as reported by the touch methods in {@link Input}. A z-coordinate of 0
+	 * rely on OpenGL. The viewport is assumed to span the whole screen and is fetched from Graphics#getWidth() and
+	 * Graphics#getHeight(). The x- and y-coordinate of vec are assumed to be in touch coordinates (origin is the top left
+	 * corner, y pointing down, x pointing to the right) as reported by the touch methods in Input. A z-coordinate of 0
 	 * will return a point on the near plane, a z-coordinate of 1 will return a point on the far plane.
 	 * @param touchCoords the point in touch coordinates
-	 * @return the mutated and unprojected touchCoords {@link Vector3} */
+	 * @return the mutated and unprojected touchCoords Vector3 */
 	public Vector3 unproject (Vector3 touchCoords, int width, int height) {
 		unproject(touchCoords, 0, 0, width, height);
 		return touchCoords;
 	}
 
-	/** Projects the {@link Vector3} given in world space to screen coordinates. It's the same as GLU gluProject with one small
+	/** Projects the Vector3 given in world space to screen coordinates. It's the same as GLU gluProject with one small
 	 * deviation: The viewport is assumed to span the whole screen. The screen coordinate system has its origin in the
 	 * <b>bottom</b> left, with the y-axis pointing <b>upwards</b> and the x-axis pointing to the right. This makes it easily
-	 * useable in conjunction with {@link Batch} and similar classes.
-	 * @return the mutated and projected worldCoords {@link Vector3} */
+	 * useable in conjunction with Batch and similar classes.
+	 * @return the mutated and projected worldCoords Vector3 */
 	public Vector3 project (Vector3 worldCoords, int width, int height) {
 		project(worldCoords, 0, 0, width, height);
 		return worldCoords;
 	}
 
-	/** Projects the {@link Vector3} given in world space to screen coordinates. It's the same as GLU gluProject with one small
+	/** Projects the Vector3 given in world space to screen coordinates. It's the same as GLU gluProject with one small
 	 * deviation: The viewport is assumed to span the whole screen. The screen coordinate system has its origin in the
 	 * <b>bottom</b> left, with the y-axis pointing <b>upwards</b> and the x-axis pointing to the right. This makes it easily
-	 * useable in conjunction with {@link Batch} and similar classes. This method allows you to specify the viewport position and
-	 * dimensions in the coordinate system expected by {@link GL20#glViewport(int, int, int, int)}, with the origin in the bottom
+	 * useable in conjunction with Batch and similar classes. This method allows you to specify the viewport position and
+	 * dimensions in the coordinate system expected by GL20#glViewport(int, int, int, int), with the origin in the bottom
 	 * left corner of the screen.
 	 * @param viewportX the coordinate of the bottom left corner of the viewport in glViewport coordinates.
 	 * @param viewportY the coordinate of the bottom left corner of the viewport in glViewport coordinates.
 	 * @param viewportWidth the width of the viewport in pixels
 	 * @param viewportHeight the height of the viewport in pixels
-	 * @return the mutated and projected worldCoords {@link Vector3} */
+	 * @return the mutated and projected worldCoords Vector3 */
 	public Vector3 project (Vector3 worldCoords, float viewportX, float viewportY, float viewportWidth, float viewportHeight) {
 		worldCoords.prj(combined);
 		worldCoords.x = viewportWidth * (worldCoords.x + 1) / 2 + viewportX;
