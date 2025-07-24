@@ -24,6 +24,10 @@ using System;
 * @author Nathan Sweet */
 public static class Intersector {
 
+	public static bool overlaps (Rectangle r1, Rectangle r2) {
+		return r1.overlaps(r2);
+	}
+
 	public static bool hasOverlap (Vector3[] axes, Vector3[] aVertices, Vector3[] bVertices) {
 		for (Vector3 axis in axes) {
 			float minA = Float.MaxValue;
