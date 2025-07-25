@@ -7,4 +7,4 @@ The changes from the original LibGDX code include the removal of some functions 
 
 The Scheduler is not ported from LibGDX, therefore I have put it under MIT.
 
-The in-code documentation of LibGDX is almost the same as the original, except I have changed the @Link segments as Beef's documentation doesn't use @Link, and some other small tweaks. The documentation was not adapted to this library, so some things might mention stuff that's only possible in the actual LibGDX, but I decided to keep the documentation as most info applies to this library too.
+The in-code documentation of LibGDX is almost the same as the original, except I have changed the @Link segments as Beef's documentation doesn't use @Link, and made some other small tweaks. Besides that, the documentation was not adapted to this library, so some things might mention stuff that's only possible in the actual LibGDX, but I decided to keep the documentation as a lot of it applies to this library too.
