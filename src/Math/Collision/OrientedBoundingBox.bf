@@ -21,6 +21,15 @@ public class OrientedBoundingBox {
 	private static Vector3[] tempVertices = new Vector3[8];
 	private static Vector3[] tmpVectors = new Vector3[9];
 
+	static this() {
+		for (int i = 0; i < tmpVectors.Count; i++) {
+			tmpVectors[i] = new Vector3();
+		}
+		for (int i = 0; i < tempVertices.Count; i++) {
+			tempVertices[i] = new Vector3();
+		}
+	}
+
 	/** Bounds used as size. */
 	private BoundingBox bounds = new BoundingBox();
 	/** Transform matrix. */
@@ -55,13 +64,6 @@ public class OrientedBoundingBox {
 	}
 
 	private void init () {
-		for (int i = 0; i < tmpVectors.Count; i++) {
-			tmpVectors[i] = new Vector3();
-		}
-		for (int i = 0; i < tempVertices.Count; i++) {
-			tempVertices[i] = new Vector3();
-		}
-
 		for (int i = 0; i < axes.Count; i++) {
 			axes[i] = new Vector3();
 		}

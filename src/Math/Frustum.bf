@@ -34,15 +34,16 @@ public class Frustum {
 		new Vector3(), new Vector3());
 	protected float[] planePointsArray = new float[8 * 3];
 
-	public this() {
+	static this() {
 		int j = 0;
 		for (Vector3 v in clipSpacePlanePoints) {
 			clipSpacePlanePointsArray[j++] = v.x;
 			clipSpacePlanePointsArray[j++] = v.y;
 			clipSpacePlanePointsArray[j++] = v.z;
 		}
+	}
 
-
+	public this() {
 		for (int i = 0; i < 6; i++) {
 			planes[i] = new Plane(new Vector3(), 0);
 		}
