@@ -18,6 +18,7 @@ namespace GameUtils;
 
 using System;
 using System.Collections;
+using SDL3.Raw;
 
 /**
  * An Animation stores a list of objects representing an animated sequence, e.g. for running or jumping. Each object in the
@@ -26,7 +27,7 @@ using System.Collections;
  * @author mzechner
 */
 
-public class Animation<T> {
+public class Animation<T> where T : SDL_Texture {
 
 	public enum PlayMode {
 		NORMAL, REVERSED, LOOP, LOOP_REVERSED, LOOP_PINGPONG, LOOP_RANDOM,

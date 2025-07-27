@@ -17,6 +17,7 @@
 namespace GameUtils.Graphics;
 
 using System;
+using SDL3.Raw;
 
 /** A camera with orthographic projection.
  * 
@@ -65,7 +66,10 @@ public class OrthographicCamera : Camera {
 	/** Sets this camera to an orthographic projection using a viewport fitting the screen resolution, centered at
 	 * (Gdx.graphics.getWidth()/2, Gdx.graphics.getHeight()/2), with the y-axis pointing up or down.
 	 * @param yDown whether y should be pointing down */
-	public void setToOrtho (bool yDown, int width, int height) {
+	public void setToOrtho (SDL_Window* window, bool yDown) {
+		int32 width = 0;
+		int32 height = 0;
+		SDL_GetWindowSize(window, &width, &height);
 		setToOrtho(yDown, width, height);
 	}
 
