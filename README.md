@@ -2,6 +2,8 @@
 
 This is a collection of some classes from [LibGDX](https://github.com/libgdx/libgdx/) that I personally use in my game, ported from Java to Beef + one original class not from LibGDX. **Not** a port of the entire LibGDX framework. **Meant to be used with SDL3**.
 
+Not even sure if it works. Use at your own risk, adjustments may be necessary to make it work. Currently stopped working on it.
+
 Because [LibGDX](https://github.com/libgdx/libgdx/) is under the Apache 2.0 license, all files containing code originally from LibGDX are under that license.
 The changes from the original LibGDX code include the removal of some functions that I personally don't use and obviously changes in syntax and used std functions to adapt it to Beef.
 
